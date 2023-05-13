@@ -1,4 +1,4 @@
-#  <img src=https://github.com/RaviKumarAgrawal/Spotify-Data-Analysis/assets/128930068/6f56e0e4-4184-481f-a3bc-b75667075ce4 height=48 width=48> LINKEDIN JOBS ANALYSIS
+#  <img src=https://github.com/RaviKumarAgrawal/Spotify-Data-Analysis/assets/128930068/6f56e0e4-4184-481f-a3bc-b75667075ce4 height=48 width=48> Spotify Data Analysis
 <img src=https://github.com/RaviKumarAgrawal/Spotify-Data-Analysis/assets/128930068/2a1ee0a7-21d1-4119-9b30-9c659affd1f1 height=300 width=1000>
 <br> 
 This project is an analysis of Spotify music data, with the aim of exploring the characteristics of different music genres and artists. The project involves several tasks, including downloading a dataset from Kaggle, performing exploratory data analysis (EDA) using pandas, and creating visualizations using matplotlib and seaborn. The visualizations allow users to gain insights into the characteristics of different genres and artists, such as tempo, loudness, and popularity.
