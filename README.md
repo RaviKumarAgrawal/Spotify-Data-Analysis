@@ -23,27 +23,76 @@ This project is an analysis of Spotify music data, with the aim of exploring the
 4.Extract insights: Use the results of your analysis to draw conclusions and insights from the data and communicate your findings clearly and effectively using visualizations and clear language.
 ## <img src=https://user-images.githubusercontent.com/106439762/178803205-47a08ce7-2187-4f96-b301-a2b68690619a.gif height=48 width=48> Results/Insights:
 # Visualisation with correlation Map
+
+ `corr_df=tracks.drop(["key","mode","explicit"],axis=1).corr(method="pearson")`
+
+ `plt.figure(figsize=(20,8))`
+
+ `heatmap=sns.heatmap(corr_df,annot=True)`
+
+ `heatmap.set_title("corrlations Heatmap between variable")`
+
 <p align="center"><a><img src=https://github.com/RaviKumarAgrawal/Spotify-Data-Analysis/assets/128930068/66450a19-0c26-4358-a270-28a8196b52f5
  height=400 width=1000></a></p>
  
 # Regression plot between loudness and energy
+
+`plt.figure(figsize=(12,6))`
+
+`sns.regplot(data=sample,y="loudness",x="energy",color="c").set(title="Loudness vs energy correlation")`
+
 <p align="center"><a><img src=https://github.com/RaviKumarAgrawal/Spotify-Data-Analysis/assets/128930068/b5b5e61d-0193-40db-87ce-2450f1d5c747
  height=400 width=1000></a></p>
  
 # Regression plot between popularity and acousticness
+
+`plt.figure(figsize=(12,6))`
+
+`sns.regplot(data=sample,y="popularity",x="acousticness",color="b").set(title="popularity vs acousticness correlation")`
+
 <p align="center"><a><img src=https://github.com/RaviKumarAgrawal/Spotify-Data-Analysis/assets/128930068/b83bd81e-8500-4ecb-bbd1-01aadd532cf3
  height=400 width=1000></a></p>
 
 # Distribution plot to visualise the total number of songs in each year since 1922 those are available on spotify music app
 
+`sns.displot(years,discrete=True,aspect=2,height=5,kind="hist").set(title="Number of songs per year")`
+
  <p align="center"><a><img src=https://github.com/RaviKumarAgrawal/Spotify-Data-Analysis/assets/128930068/644635ab-2e41-44b0-b8e4-29d3d8bdc18f
  height=400 width=1000></a></p>
  
  # Duration of songs over years
+ 
+ `total_dr=tracks.duration`
+ 
+`fig_dims=(30,15)`
+
+`fig,ax=plt.subplots(figsize=fig_dims)`
+
+`fig=sns.barplot(x=years,y=total_dr,ax=ax,errwidth=False).set(title="year vs duration")`
+
+`plt.xticks(rotation=90)`
+
+`plt.show()`
+
  <p align="center"><a><img src=https://github.com/RaviKumarAgrawal/Spotify-Data-Analysis/assets/128930068/d7bdf1fb-5240-4b60-a4e0-204fbb56ce91
  height=400 width=1000></a></p>
  
  # Line plot to show the average duration of the songs over the years
+ 
+ `total_dr=tracks.duration`
+ 
+`sns.set_style(style="whitegrid")`
+
+`fig_dims=(10,5)`
+
+`fig,ax=plt.subplots(figsize=fig_dims)`
+
+`fig=sns.lineplot(x=years,y=total_dr,ax=ax).set(title="Year vs Duration")`
+
+`plt.xticks(rotation=60)`
+
+`plt.show()`
+
  <p align="center"><a><img src=https://github.com/RaviKumarAgrawal/Spotify-Data-Analysis/assets/128930068/766dcf1c-b19d-474c-ba94-bbb02e0010e4
  height=400 width=1000></a></p>
  
